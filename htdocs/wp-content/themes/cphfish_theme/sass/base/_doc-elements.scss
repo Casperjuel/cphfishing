@@ -1,0 +1,59 @@
+// Document body
+// ------------------------
+body {
+  background-color: #fff;
+  color: $base-font-color;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+}
+
+// Headings
+// ------------------------
+h1, h2, h3, h4, h5, h6 {
+  text-rendering: optimizeLegibility;
+  line-height: $base-heading-line-height;
+}
+
+h1 {
+  font-size: $base-heading-h1;
+}
+
+h2 {
+  font-size: $base-heading-h2;
+}
+
+h3 {
+  font-size: $base-heading-h3;
+}
+
+h4 {
+  font-size: $base-heading-h4;
+}
+
+h5 {
+  font-size: $base-heading-h5;
+}
+
+h6 {
+  font-size: $base-heading-h6;
+}
+
+// Anchor
+// ------------------------
+a {
+  color: $red;
+
+  &:visited {
+    color: $darkred;
+  }
+
+  &:hover {}
+
+  &:active, &:focus {}
+}
+
+html::root {
+  margin: 0 !important;
+  padding: 0;
+}

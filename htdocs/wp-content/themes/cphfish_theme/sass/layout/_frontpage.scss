@@ -1,0 +1,87 @@
+$teaser-height: 250px;
+
+.page-template-front-page {
+  .frontpage-top {
+    margin: 40px 0;
+
+    .left {
+      @include span-columns(8);
+
+      > div {
+        width: 100%;
+        background-color: #555;
+        height: $teaser-height * 2 + 30px;
+      }
+    }
+
+    .right {
+      @include span-columns(4);
+
+      @include omega;
+
+      > div {
+        width: 100%;
+        height: $teaser-height;
+        margin-bottom: 30px;
+        background-color: grey;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .frontpage-articles {
+    margin: 40px 0;
+  }
+
+  .frontpage-guides {
+    margin: 40px 0;
+  }
+
+  .section-title {
+    display: block;
+
+    @include clearfix;
+  }
+
+  .see-all {
+    float: right;
+    display: block;
+  }
+}
+
+.inner {
+  @include outer-container;
+}
+
+.teaser-wrapper {
+  .post-teaser {
+    @include span-columns(4);
+
+    position: relative;
+
+    @include omega(3n);
+
+    height: $teaser-height;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 25px;
+
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      background: #348F50;
+      background: -webkit-linear-gradient(to left, #348F50, #56B4D3);
+      background: linear-gradient(to left, #348F50, #56B4D3);
+      opacity: 0.2;
+      user-select: none;
+    }
+  }
+}

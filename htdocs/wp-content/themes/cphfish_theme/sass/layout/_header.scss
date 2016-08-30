@@ -1,0 +1,116 @@
+header.site-header {
+  width: 100%;
+  clear: both;
+  position: relative;
+  padding: 20px 0 20px;
+
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0px;
+    height: 5px;
+    width: 100%;
+    background: #348F50;
+    background: -webkit-linear-gradient(to left, #348F50, #56B4D3);
+    background: linear-gradient(to left, #348F50, #56B4D3);
+  }
+
+  .inner {}
+
+  .site-branding {
+    @include span-columns(4);
+
+    height: 55px;
+    padding-top: 10px;
+
+    img {
+      height: 55px;
+      width: auto;
+    }
+  }
+
+  .usermenu {
+    @include span-columns(6);
+
+    float: right;
+    height: 30px;
+    clear: right;
+
+    @include omega;
+
+    ul {
+      margin: 0;
+      padding: 0;
+      text-align: right;
+
+      li {
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+        float: none;
+
+        a {
+          display: block;
+          line-height: 40px;
+          font-size: 14px;
+          padding: 0 10px;
+          color: black;
+        }
+
+        &:last-child a {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+
+  .main-navigation {
+    @include span-columns(8);
+
+    @include omega;
+
+    clear: right;
+    float: right;
+
+    ul {
+      margin: 0;
+      padding: 0;
+      text-align: right;
+
+      li {
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+        float: none;
+
+        a {
+          display: block;
+          line-height: 30px;
+          font-size: 21px;
+          padding: 0 10px;
+          color: black;
+          text-transform: uppercase;
+          font-weight: 900;
+          letter-spacing: 0.03em;
+          cursor: pointer;
+
+          &:hover {
+            color: $primary;
+          }
+        }
+      }
+
+      &:last-child a {
+        padding-right: 0;
+      }
+    }
+  }
+}
+
+li.current-menu-item {
+  a {
+    color: $primary;
+  }
+}
