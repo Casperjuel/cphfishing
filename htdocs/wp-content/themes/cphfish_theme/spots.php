@@ -240,7 +240,7 @@ get_header(); ?>
     "featureType": "road.highway"  }
 ],
         }
-        var mapElement = document.getElementById('fishingspots');
+        var mapElement = document.getElementById('fishingspotsmap');
         var map = new google.maps.Map(mapElement, mapOptions);
         var locations = [
 
@@ -272,7 +272,11 @@ link = '';     }
   height: auto;
   overflow: hidden;
 }
-    #fishingspots {
+.fishingspots {
+  float:left;
+  width: 50%;
+}
+    #fishingspotsmap {
       float: left;
         height:80vh;
         width:100%;
@@ -290,6 +294,25 @@ link = '';     }
     }
 </style>
 <div id="fishingspotswrapper">
-<div id='fishingspots'></div></div>
-<?php
-get_footer();
+    <div id='fishingspotsmap'></div>
+</div>
+    <div class="fishingspots">
+      <div class="teaser-wrapper">
+        <?php
+        $args = array( 'posts_per_page' => -1, 'category' => 16 );
+        $myposts = get_posts( $args );
+        foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
+        
+          <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
+          <a href="<?php the_permalink(); ?>" class="post-teaser" style="background-image: url('<?php echo $image[0]; ?>')">
+            <div class="label">Fiskespot</div>
+            <h3><?php the_title(); ?></h3>
+            <?php the_excerpt(); ?>
+        
+          </a>
+        <?php endforeach; wp_reset_postdata();?>
+
+      </div>
+
+    </div>
+<?php get_footer();

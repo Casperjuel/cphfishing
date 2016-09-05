@@ -3,6 +3,19 @@ header.site-header {
   clear: both;
   position: relative;
   padding: 20px 0 20px;
+  color: black;
+
+  .single-post & {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    color: white;
+
+    * {
+      color: white;
+    }
+  }
 
   &:after {
     content: "";
@@ -56,7 +69,7 @@ header.site-header {
           line-height: 40px;
           font-size: 14px;
           padding: 0 10px;
-          color: black;
+          color: inherit;
         }
 
         &:last-child a {
@@ -90,7 +103,7 @@ header.site-header {
           line-height: 30px;
           font-size: 21px;
           padding: 0 10px;
-          color: black;
+          color: inherit;
           text-transform: uppercase;
           font-weight: 900;
           letter-spacing: 0.03em;

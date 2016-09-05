@@ -33,7 +33,7 @@
 					<?php wp_nav_menu( array( 'theme_location' => 'usermenu', 'menu_id' => 'usermenu' ) ); ?>
 			</nav>
 			<div class="site-branding">
-				<img alt="Logo" src="/wp-content/themes/cphfish_theme/img/logo.svg">
+				<a href="/"><img alt="Logo" src="/wp-content/themes/cphfish_theme/img/logo.svg"/></a>
 			</div>
 
 			<nav id="site-navigation" class="main-navigation" role="navigation">

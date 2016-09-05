@@ -1,4 +1,4 @@
-$teaser-height: 250px;
+$teaser-height: 350px;
 
 .page-template-front-page {
   .frontpage-top {
@@ -58,17 +58,35 @@ $teaser-height: 250px;
 
 .teaser-wrapper {
   .post-teaser {
-    @include span-columns(4);
+    @include span-columns(3);
 
     position: relative;
 
-    @include omega(3n);
+    @include omega(4n);
 
     height: $teaser-height;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     margin-bottom: 25px;
+    color: #333;
+    text-decoration: none;
+    display: block;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    .label {
+      position: absolute;
+      left: 0;
+      top: 0;
+      padding: 5px;
+      background-color: #333;
+      color: white;
+    }
 
     &:after {
       content: "";
@@ -84,4 +102,52 @@ $teaser-height: 250px;
       user-select: none;
     }
   }
+}
+
+article.type-post {
+  @include outer-container(960px);
+
+  letter-spacing: 0.02rem;
+  font-weight: 300;
+
+  img {
+    padding: 15px;
+  }
+}
+
+.highlighted {
+  @include outer-container(960px);
+
+  background-color: #ccc;
+  padding: 30px 20px;
+  margin: 40px auto;
+}
+
+.entry-title {
+  display: block;
+  max-width: 960px;
+  padding-right: 320px;
+  font-size: 90px;
+  line-height: 90px;
+  margin: auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  font-weight: bold;
+  color: black;
+  letter-spacing: -0.1rem;
+}
+
+.top-image {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  min-height: 520px;
+  background-color: #ccc;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+html {
+  margin-top: 0 !important;
 }
