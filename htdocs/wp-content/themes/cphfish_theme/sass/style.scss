@@ -15,12 +15,13 @@
 /* Layouts
 ---------------------*/
 @import "layout/frontpage"; // frontpage layout
+@import "layout/spots"; // frontpage layout
 @import "layout/header"; // Header layout
 
 /* Comment here
 ---------------------*/
 
-.col-full {
+.col-full, .site-content {
   @include outer-container;
 
   position: relative;
@@ -40,15 +41,15 @@ body {
   margin: auto;
 }
 
-footer {
+.site-footer {
   width: 100%;
   clear: both;
-  background: -webkit-linear-gradient(to left, darken(#348F50, 30%), darken(#56B4D3, 30%));
-  background: linear-gradient(to left, darken(#348F50, 30%), darken(#56B4D3, 30%));
+  background-color: #eee;
+  border-top: solid 20px #e6e6e6;
   padding: 40px 0 20px;
   min-height: 200px;
   height: auto;
   overflow: hidden;
   text-align: center;
-  color: white;
+  color: #999;
 }

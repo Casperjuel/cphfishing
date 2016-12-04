@@ -72,7 +72,6 @@ $teaser-height: 350px;
     color: #333;
     text-decoration: none;
     display: block;
-    overflow: hidden;
 
     img {
       width: 100%;
@@ -81,8 +80,11 @@ $teaser-height: 350px;
 
     .label {
       position: absolute;
-      left: 0;
-      top: 0;
+      left: -20px;
+      border-radius: 100px;
+      width: 80px;
+      height: 80px;
+      top: -20px;
       padding: 5px;
       background-color: #333;
       color: white;
@@ -98,7 +100,7 @@ $teaser-height: 350px;
       background: #348F50;
       background: -webkit-linear-gradient(to left, #348F50, #56B4D3);
       background: linear-gradient(to left, #348F50, #56B4D3);
-      opacity: 0.2;
+      opacity: 0.1;
       user-select: none;
     }
   }

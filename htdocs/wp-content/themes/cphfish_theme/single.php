@@ -18,10 +18,6 @@ get_header(); ?>
 </article><!-- #post-## -->
 
 
-
-
-
-
 	<div class="highlighted">
 		<?php
 		$post_object = get_field('highlighted_related_post');
